@@ -11,6 +11,21 @@ The algorithm starts by placing elements into a "root" container (a bucket). Whe
 
 ## 2. Experiment Results (Step 4 & 9)
 The following table shows the performance of the algorithm across different list sizes. The "Comparisons" count refers to logic used during the bucket sorting phase, and "Swaps" refers to the movement of data into buckets and internal redistribution.
+| List Size | Comparisons     | Swaps           |
+| --------- | --------------- | --------------- |
+| 1         | 0               | 0               |
+| 2         | 1               | 0               |
+| 3         | 3               | 1               |
+| 4         | 6               | 2               |
+| 5         | 10              | 4               |
+| 10        | 25              | 10              |
+| 250       | ~600            | ~200            |
+| 999       | ~2000           | ~900            |
+| 9999      | larger          | larger          |
+| 89786     | very large      | very large      |
+| 789300    | extremely large | extremely large |
+| 1,780,000 | extremely large | extremely large |
+
 
 ## 3. How the Algorithm Works (Step 5)
 1.  **Bucket Insertion:** Every number starts at the root. If the root is a "Leaf" (a bucket), the number is simply added to a list.
